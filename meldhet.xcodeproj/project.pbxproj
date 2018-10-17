@@ -196,13 +196,16 @@
 				TargetAttributes = {
 					7D31C25F216B96D60070530F = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					7D31C276216B96D70070530F = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 7D31C25F216B96D60070530F;
 					};
 					7D31C281216B96D70070530F = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 7D31C25F216B96D60070530F;
 					};
 				};
@@ -435,7 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N8W4QGMSQQ;
 				INFOPLIST_FILE = meldhet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,7 +446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -453,7 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = N8W4QGMSQQ;
 				INFOPLIST_FILE = meldhet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,7 +464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -480,7 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/meldhet.app/meldhet";
 			};
@@ -500,7 +503,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/meldhet.app/meldhet";
 			};
@@ -519,7 +522,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = meldhet;
 			};
@@ -538,7 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = meldhet;
 			};
