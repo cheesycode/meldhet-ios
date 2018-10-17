@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L6v-n4-2CI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L6v-n4-2CI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -104,7 +102,7 @@
                                                 <rect key="frame" x="251.5" y="0.0" width="117.5" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wlq-E7-TRy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="117.5"/>
                                                         <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -115,7 +113,7 @@
                                                         </connections>
                                                     </imageView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-t7-xFK">
-                                                        <rect key="frame" x="0.0" y="118" width="117.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="117.5" width="117.5" height="18.5"/>
                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.54509803921568623" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Bestrating">
@@ -139,7 +137,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="117.5" height="135.5"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-V5-ull">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="117.5"/>
                                                         <color key="backgroundColor" red="0.62745098039215685" green="0.83137254901960778" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -150,7 +148,7 @@
                                                         </connections>
                                                     </imageView>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUb-be-4wV">
-                                                        <rect key="frame" x="0.0" y="118" width="117.5" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="117.5" width="117.5" height="18"/>
                                                         <color key="backgroundColor" red="0.5490196078431373" green="0.75686274509803919" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Groen">
@@ -413,16 +411,30 @@
             </objects>
             <point key="canvasLocation" x="4654" y="-9"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Kit View Controller-->
         <scene sceneID="Dfc-DP-AvU">
             <objects>
-                <viewController id="mKx-Q1-7OY" sceneMemberID="viewController">
+                <viewController id="mKx-Q1-7OY" customClass="MapKitViewController" customModule="meldhet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="za5-8I-JSw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9NJ-Tf-1uH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9NJ-Tf-1uH" firstAttribute="leading" secondItem="819-w9-rgs" secondAttribute="leading" id="1Tn-Vh-l6K"/>
+                            <constraint firstItem="819-w9-rgs" firstAttribute="trailing" secondItem="9NJ-Tf-1uH" secondAttribute="trailing" id="g2m-si-heZ"/>
+                            <constraint firstItem="9NJ-Tf-1uH" firstAttribute="top" secondItem="819-w9-rgs" secondAttribute="top" id="mb4-GM-tN0"/>
+                            <constraint firstItem="819-w9-rgs" firstAttribute="bottom" secondItem="9NJ-Tf-1uH" secondAttribute="bottom" id="wgQ-iz-hCE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="819-w9-rgs"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="9NJ-Tf-1uH" id="r5Q-5e-Ud3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxk-Fb-SzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

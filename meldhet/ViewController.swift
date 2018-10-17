@@ -21,8 +21,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func onChatClickedHandler(_ sender: Any) {
-        print("GODVERDOMME WERK DAN")
-        
         self.performSegue(withIdentifier: "mapSegue", sender: sender)
     }
     

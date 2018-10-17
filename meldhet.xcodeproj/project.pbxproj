@@ -17,6 +17,8 @@
 		7D31C287216B96D70070530F /* meldhetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C286216B96D70070530F /* meldhetUITests.swift */; };
 		7D55A89A216F51820042B5E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A899216F51820042B5E1 /* AVFoundation.framework */; };
 		7D55A89C216F82F50042B5E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A89B216F82F50042B5E1 /* MapKit.framework */; };
+		7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53821773B49003983E0 /* MapKitViewController.swift */; };
+		7D91D53B217759F9003983E0 /* issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53A217759F9003983E0 /* issue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		7D55A898216F370C0042B5E1 /* meldhet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = meldhet.entitlements; sourceTree = "<group>"; };
 		7D55A899216F51820042B5E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7D55A89B216F82F50042B5E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D91D53821773B49003983E0 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		7D91D53A217759F9003983E0 /* issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = issue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				7D31C26F216B96D70070530F /* LaunchScreen.storyboard */,
 				7D31C272216B96D70070530F /* Info.plist */,
 				7D31C26A216B96D60070530F /* meldhet.xcdatamodeld */,
+				7D91D53821773B49003983E0 /* MapKitViewController.swift */,
+				7D91D53A217759F9003983E0 /* issue.swift */,
 			);
 			path = meldhet;
 			sourceTree = "<group>";
@@ -215,6 +221,11 @@
 					7D31C25F216B96D60070530F = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7D31C276216B96D70070530F = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -280,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D91D53B217759F9003983E0 /* issue.swift in Sources */,
 				7D31C266216B96D60070530F /* ViewController.swift in Sources */,
 				7D31C264216B96D60070530F /* AppDelegate.swift in Sources */,
+				7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */,
 				7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,6 +498,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
