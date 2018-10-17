@@ -132,6 +132,7 @@
                                                     <imageView contentMode="center" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_nature_people_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-V5-ull">
                                                         <rect key="frame" x="0.0" y="0.0" width="99.5" height="86"/>
                                                         <color key="backgroundColor" red="0.62745098039215685" green="0.83137254901960778" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ps0-V5-ull" secondAttribute="height" multiplier="1:1" priority="999" id="XIq-HQ-ce0"/>
@@ -187,6 +188,7 @@
                                                     <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_record_voice_over_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-VY-pLT">
                                                         <rect key="frame" x="0.0" y="0.0" width="99.5" height="86"/>
                                                         <color key="backgroundColor" red="0.30980392156862746" green="0.75686274509803919" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cuc-VY-pLT" secondAttribute="height" multiplier="1:1" priority="999" id="sWj-aI-etb"/>
@@ -219,6 +221,7 @@
                                                     <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_add_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-EO-jsx">
                                                         <rect key="frame" x="0.0" y="0.0" width="99.5" height="86"/>
                                                         <color key="backgroundColor" red="0.31372549019607843" green="0.61176470588235299" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ePA-EO-jsx" secondAttribute="height" multiplier="1:1" priority="999" id="V8T-IN-hph"/>
@@ -246,6 +249,7 @@
                                                     <imageView contentMode="center" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_info_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-GQ-bFk">
                                                         <rect key="frame" x="0.0" y="0.0" width="99" height="86"/>
                                                         <color key="backgroundColor" red="0.92549019607843142" green="0.52941176470588236" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="G2q-GQ-bFk" secondAttribute="height" multiplier="1:1" priority="900" id="L99-vp-Xm3"/>
@@ -273,6 +277,7 @@
                                                     <imageView contentMode="center" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_forum_white_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="Wb0-L5-Qlk">
                                                         <rect key="frame" x="0.0" y="0.0" width="99.5" height="86"/>
                                                         <color key="backgroundColor" red="0.67450980392156867" green="0.5725490196078431" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Wb0-L5-Qlk" secondAttribute="height" multiplier="1:1" priority="999" id="kmh-s0-zUd"/>
@@ -318,7 +323,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="oLJ-np-MpH"/>
                     <connections>
-                        <outlet property="image" destination="A4a-HK-MqG" id="ngk-zQ-rfZ"/>
                         <segue destination="jRR-yO-vNF" kind="show" identifier="cameraSegue" id="s9c-Q7-FNI"/>
                         <segue destination="mKx-Q1-7OY" kind="show" identifier="mapSegue" id="GJV-Ba-9oL"/>
                     </connections>
@@ -399,16 +403,33 @@
             </objects>
             <point key="canvasLocation" x="3487.1999999999998" y="-8.5457271364317844"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload View Controller-->
         <scene sceneID="2x5-Vw-GV3">
             <objects>
-                <viewController id="jRR-yO-vNF" sceneMemberID="viewController">
+                <viewController id="jRR-yO-vNF" customClass="UploadViewController" customModule="meldhet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dH7-3U-uOg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lR-gO-x59">
+                                <rect key="frame" x="40" y="108" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sad" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAs-Ps-TWF">
+                                <rect key="frame" x="112" y="313" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Vu5-HD-4aZ"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="7lR-gO-x59" id="EL2-uS-iyE"/>
+                        <outlet property="text" destination="UAs-Ps-TWF" id="kxf-hN-CbI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydx-T3-fE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,5 +481,5 @@
         <image name="icons8-factory-breakdown-filled-50" width="50" height="50"/>
         <image name="icons8-poo-filled-50" width="50" height="50"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

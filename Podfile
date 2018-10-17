@@ -7,6 +7,9 @@ target 'meldhet' do
 
   # Pods for meldhet
     pod 'Firebase/Core'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Auth'
+
 
   target 'meldhetTests' do
     inherit! :search_paths

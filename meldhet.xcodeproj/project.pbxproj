@@ -21,6 +21,7 @@
 		7D55A89A216F51820042B5E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A899216F51820042B5E1 /* AVFoundation.framework */; };
 		7D55A89C216F82F50042B5E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A89B216F82F50042B5E1 /* MapKit.framework */; };
 		843B66262177660C00EA9BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843B66252177660C00EA9BBF /* GoogleService-Info.plist */; };
+		8471664321777233007E3856 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471664221777233007E3856 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7D55A899216F51820042B5E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7D55A89B216F82F50042B5E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		843B66252177660C00EA9BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8471664221777233007E3856 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetUITests/Pods-meldhetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B7656F5152DEE28EC7CE378 /* Pods_meldhet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meldhet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A430569CD168560B79CF2193 /* Pods-meldhetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetTests/Pods-meldhetTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				7D31C26F216B96D70070530F /* LaunchScreen.storyboard */,
 				7D31C272216B96D70070530F /* Info.plist */,
 				7D31C26A216B96D60070530F /* meldhet.xcdatamodeld */,
+				8471664221777233007E3856 /* UploadViewController.swift */,
 			);
 			path = meldhet;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-meldhet/Pods-meldhet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -379,6 +383,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -417,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D31C266216B96D60070530F /* ViewController.swift in Sources */,
+				8471664321777233007E3856 /* UploadViewController.swift in Sources */,
 				7D31C264216B96D60070530F /* AppDelegate.swift in Sources */,
 				7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */,
 			);
