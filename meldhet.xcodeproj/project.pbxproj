@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16EB1B571CABB8ADC963EB9F /* Pods_meldhetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395D2BB0CCE3DD69D2FB41B1 /* Pods_meldhetUITests.framework */; };
+		1A075E9C94F508316D345AD2 /* Pods_meldhet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7656F5152DEE28EC7CE378 /* Pods_meldhet.framework */; };
+		7327D45B8969C10059D32009 /* Pods_meldhetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A826F48E9676E59751BAFBE9 /* Pods_meldhetTests.framework */; };
 		7D31C264216B96D60070530F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C263216B96D60070530F /* AppDelegate.swift */; };
 		7D31C266216B96D60070530F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C265216B96D60070530F /* ViewController.swift */; };
-		7D31C269216B96D60070530F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D31C267216B96D60070530F /* Main.storyboard */; };
+		7D31C269216B96D60070530F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D31C267216B96D60070530F /* Main.storyboard */; settings = {ASSET_TAGS = (Item1, ); }; };
 		7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C26A216B96D60070530F /* meldhet.xcdatamodeld */; };
 		7D31C26E216B96D70070530F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D31C26D216B96D70070530F /* Assets.xcassets */; };
 		7D31C271216B96D70070530F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D31C26F216B96D70070530F /* LaunchScreen.storyboard */; };
@@ -17,6 +20,7 @@
 		7D31C287216B96D70070530F /* meldhetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C286216B96D70070530F /* meldhetUITests.swift */; };
 		7D55A89A216F51820042B5E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A899216F51820042B5E1 /* AVFoundation.framework */; };
 		7D55A89C216F82F50042B5E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A89B216F82F50042B5E1 /* MapKit.framework */; };
+		843B66262177660C00EA9BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843B66252177660C00EA9BBF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		395D2BB0CCE3DD69D2FB41B1 /* Pods_meldhetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meldhetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CBD874287F8E2201C91BADC /* Pods-meldhet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhet.release.xcconfig"; path = "Pods/Target Support Files/Pods-meldhet/Pods-meldhet.release.xcconfig"; sourceTree = "<group>"; };
+		3F66EF3C3B8187C30FA1A759 /* Pods-meldhetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetUITests/Pods-meldhetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D31C260216B96D60070530F /* meldhet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meldhet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D31C263216B96D60070530F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D31C265216B96D60070530F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +61,13 @@
 		7D55A898216F370C0042B5E1 /* meldhet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = meldhet.entitlements; sourceTree = "<group>"; };
 		7D55A899216F51820042B5E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7D55A89B216F82F50042B5E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		843B66252177660C00EA9BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetUITests/Pods-meldhetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B7656F5152DEE28EC7CE378 /* Pods_meldhet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meldhet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A430569CD168560B79CF2193 /* Pods-meldhetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetTests/Pods-meldhetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A826F48E9676E59751BAFBE9 /* Pods_meldhetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meldhetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA852DEC99ED88A2CAA8797 /* Pods-meldhet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhet/Pods-meldhet.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE3BC409D4AC524C39F7344 /* Pods-meldhetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetTests/Pods-meldhetTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,7 @@
 			files = (
 				7D55A89C216F82F50042B5E1 /* MapKit.framework in Frameworks */,
 				7D55A89A216F51820042B5E1 /* AVFoundation.framework in Frameworks */,
+				1A075E9C94F508316D345AD2 /* Pods_meldhet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7327D45B8969C10059D32009 /* Pods_meldhetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +93,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EB1B571CABB8ADC963EB9F /* Pods_meldhetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23BDA0A28925233AE2EFF4B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAA852DEC99ED88A2CAA8797 /* Pods-meldhet.debug.xcconfig */,
+				3CBD874287F8E2201C91BADC /* Pods-meldhet.release.xcconfig */,
+				A430569CD168560B79CF2193 /* Pods-meldhetTests.debug.xcconfig */,
+				EFE3BC409D4AC524C39F7344 /* Pods-meldhetTests.release.xcconfig */,
+				8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */,
+				3F66EF3C3B8187C30FA1A759 /* Pods-meldhetUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D31C257216B96D60070530F = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +121,7 @@
 				7D31C285216B96D70070530F /* meldhetUITests */,
 				7D31C261216B96D60070530F /* Products */,
 				7D55A895216F36EE0042B5E1 /* Frameworks */,
+				23BDA0A28925233AE2EFF4B6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +138,7 @@
 		7D31C262216B96D60070530F /* meldhet */ = {
 			isa = PBXGroup;
 			children = (
+				843B66252177660C00EA9BBF /* GoogleService-Info.plist */,
 				7D55A898216F370C0042B5E1 /* meldhet.entitlements */,
 				7D31C263216B96D60070530F /* AppDelegate.swift */,
 				7D31C265216B96D60070530F /* ViewController.swift */,
@@ -142,6 +174,9 @@
 			children = (
 				7D55A89B216F82F50042B5E1 /* MapKit.framework */,
 				7D55A899216F51820042B5E1 /* AVFoundation.framework */,
+				9B7656F5152DEE28EC7CE378 /* Pods_meldhet.framework */,
+				A826F48E9676E59751BAFBE9 /* Pods_meldhetTests.framework */,
+				395D2BB0CCE3DD69D2FB41B1 /* Pods_meldhetUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D31C28B216B96D70070530F /* Build configuration list for PBXNativeTarget "meldhet" */;
 			buildPhases = (
+				21E9B4A4E9C8EF942E330B2C /* [CP] Check Pods Manifest.lock */,
 				7D31C25C216B96D60070530F /* Sources */,
 				7D31C25D216B96D60070530F /* Frameworks */,
 				7D31C25E216B96D60070530F /* Resources */,
+				9B7FEDE5385BD68E019E27E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D31C28E216B96D70070530F /* Build configuration list for PBXNativeTarget "meldhetTests" */;
 			buildPhases = (
+				AFE77A74A34FFF7DEDC2ED05 /* [CP] Check Pods Manifest.lock */,
 				7D31C273216B96D70070530F /* Sources */,
 				7D31C274216B96D70070530F /* Frameworks */,
 				7D31C275216B96D70070530F /* Resources */,
@@ -188,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D31C291216B96D70070530F /* Build configuration list for PBXNativeTarget "meldhetUITests" */;
 			buildPhases = (
+				6FC6848CE08F1F1293705886 /* [CP] Check Pods Manifest.lock */,
 				7D31C27E216B96D70070530F /* Sources */,
 				7D31C27F216B96D70070530F /* Frameworks */,
 				7D31C280216B96D70070530F /* Resources */,
@@ -208,6 +247,9 @@
 		7D31C258216B96D60070530F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Item1,
+				);
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = cheesycode.com;
@@ -254,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D31C271216B96D70070530F /* LaunchScreen.storyboard in Resources */,
+				843B66262177660C00EA9BBF /* GoogleService-Info.plist in Resources */,
 				7D31C26E216B96D70070530F /* Assets.xcassets in Resources */,
 				7D31C269216B96D60070530F /* Main.storyboard in Resources */,
 			);
@@ -274,6 +317,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21E9B4A4E9C8EF942E330B2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meldhet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FC6848CE08F1F1293705886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meldhetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B7FEDE5385BD68E019E27E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-meldhet/Pods-meldhet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meldhet/Pods-meldhet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFE77A74A34FFF7DEDC2ED05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meldhetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D31C25C216B96D60070530F /* Sources */ = {
@@ -453,6 +589,7 @@
 		};
 		7D31C28C216B96D70070530F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA852DEC99ED88A2CAA8797 /* Pods-meldhet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -472,6 +609,7 @@
 		};
 		7D31C28D216B96D70070530F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CBD874287F8E2201C91BADC /* Pods-meldhet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -491,6 +629,7 @@
 		};
 		7D31C28F216B96D70070530F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A430569CD168560B79CF2193 /* Pods-meldhetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +650,7 @@
 		};
 		7D31C290216B96D70070530F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE3BC409D4AC524C39F7344 /* Pods-meldhetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +671,7 @@
 		};
 		7D31C292216B96D70070530F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +691,7 @@
 		};
 		7D31C293216B96D70070530F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F66EF3C3B8187C30FA1A759 /* Pods-meldhetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

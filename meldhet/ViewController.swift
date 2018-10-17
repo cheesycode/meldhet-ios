@@ -13,8 +13,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     var imagePicker : UIImagePickerController!
 
     @IBAction func onImageClicked(_ sender: UITapGestureRecognizer) {
-        print("Broken clicked")
-        
+        print(sender.name as! String)
         self.imagePicker = UIImagePickerController()
         self.imagePicker.delegate = self
         self.imagePicker.sourceType = .camera
@@ -29,8 +28,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func onChatClickedHandler(_ sender: Any) {
-        print("GODVERDOMME WERK DAN")
+    @IBAction func onChatClickedHandler(_ sender: UITapGestureRecognizer) {
+        print(sender.name as! String)
         
         self.performSegue(withIdentifier: "mapSegue", sender: sender)
     }
