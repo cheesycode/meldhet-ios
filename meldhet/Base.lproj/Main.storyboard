@@ -434,11 +434,27 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="9NJ-Tf-1uH" id="r5Q-5e-Ud3"/>
+                        <segue destination="RXe-q2-WKe" kind="show" identifier="chatSegue" id="Hkc-re-frm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxk-Fb-SzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4431" y="758"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7NG-aK-PPg">
+            <objects>
+                <viewController id="RXe-q2-WKe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d52-zd-uAi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LFx-uv-KZs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN9-PZ-Kji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5532" y="758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MSa-rO-744">

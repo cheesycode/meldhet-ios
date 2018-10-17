@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit;
 
-class MapKitViewController: UIViewController, CLLocationManagerDelegate {
+class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     var geoLocation : CLLocationManager
     
@@ -29,6 +29,7 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate {
         
         self.geoLocation.requestAlwaysAuthorization()
         self.geoLocation.requestWhenInUseAuthorization()
+        self.mapView.delegate = self
         
         if CLLocationManager.locationServicesEnabled() {
             self.geoLocation.delegate = self
@@ -44,9 +45,6 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate {
         let loc = locations.last! as CLLocation
         let center = CLLocationCoordinate2D(latitude: loc.coordinate.latitude, longitude: loc.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = center
         
         self.mapView.setRegion(region, animated: true)
         self.geoLocation.stopUpdatingLocation()
@@ -69,7 +67,7 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate {
                     }
                     
                     for issue in json {
-                        let annotation = MKPointAnnotation()
+                        let annotation = IssueAnnotation(id: issue.id, issue: issue)
                         let lat = CLLocationDegrees(issue.lat)
                         let lon = CLLocationDegrees(issue.lon)
                         let loc = CLLocationCoordinate2D(latitude: lat, longitude: lon)
@@ -84,6 +82,19 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation = view.annotation as! IssueAnnotation
+        
+        print("You clicked on issue: " + annotation.issue.id)
+    }
+    
+    public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let _annotation = annotation as! IssueAnnotation
+        let pinAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: _annotation.id)
+
+        
+        return pinAnnotationView
+    }
 
     /*
     // MARK: - Navigation
