@@ -9,17 +9,26 @@ import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var image: UIImageView!
     var imagePicker : UIImagePickerController!
 
     @IBAction func onImageClicked(_ sender: UITapGestureRecognizer) {
         print("Broken clicked")
         
-        //self.imagePicker = UIImagePickerController()
-        //self.imagePicker.delegate = self
-        //self.imagePicker.sourceType = .camera
-        //present(self.imagePicker, animated: true, completion: nil)
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.delegate = self
+        self.imagePicker.sourceType = .camera
+        present(self.imagePicker, animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            image.contentMode = .scaleAspectFit
+            image.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func onChatClickedHandler(_ sender: Any) {
         print("GODVERDOMME WERK DAN")
         

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L6v-n4-2CI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L6v-n4-2CI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +38,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="117.5" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-HK-MqG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="117.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="115.5"/>
                                                         <color key="backgroundColor" red="0.92941176470588238" green="0.33333333333333331" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -50,31 +48,28 @@
                                                             <outletCollection property="gestureRecognizers" destination="3sk-lc-2zM" appends="YES" id="adM-HT-UXk"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q3-p0-YRa">
-                                                        <rect key="frame" x="0.0" y="117.5" width="117.5" height="18.5"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" editable="NO" text="Kapot" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q3-p0-YRa">
+                                                        <rect key="frame" x="0.0" y="115.5" width="117.5" height="20.5"/>
                                                         <color key="backgroundColor" red="0.85490196078431369" green="0.26666666666666666" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                                         </accessibility>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Kapot">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
                                                 <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="A4a-HK-MqG" firstAttribute="height" secondItem="Xfd-eV-06V" secondAttribute="height" multiplier="0.85" id="UcF-3P-Agl"/>
+                                                    <constraint firstItem="7Q3-p0-YRa" firstAttribute="height" secondItem="Xfd-eV-06V" secondAttribute="height" multiplier="0.15" id="dLq-h1-VJS"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-nt-ofB">
                                                 <rect key="frame" x="125.5" y="0.0" width="118" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-gi-OY0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="117.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="115.5"/>
                                                         <color key="backgroundColor" red="0.9882352941176471" green="0.43137254901960786" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -84,27 +79,24 @@
                                                             <outletCollection property="gestureRecognizers" destination="EQc-Oo-7Ur" appends="YES" id="4Ek-Eq-ebu"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9j-vu-lzG">
-                                                        <rect key="frame" x="0.0" y="117.5" width="118" height="18.5"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" editable="NO" text="Verlichting" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9j-vu-lzG">
+                                                        <rect key="frame" x="0.0" y="115.5" width="118" height="20.5"/>
                                                         <color key="backgroundColor" red="0.9137254901960784" green="0.3411764705882353" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Verlichting">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="B9j-vu-lzG" firstAttribute="height" secondItem="Owz-nt-ofB" secondAttribute="height" multiplier="0.15" id="AIi-lT-MfL"/>
+                                                    <constraint firstItem="Ssm-gi-OY0" firstAttribute="height" secondItem="Owz-nt-ofB" secondAttribute="height" multiplier="0.85" id="JaK-2T-ZHy"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SHX-LT-azw">
                                                 <rect key="frame" x="251.5" y="0.0" width="117.5" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wlq-E7-TRy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="115.5"/>
                                                         <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -114,21 +106,18 @@
                                                             <outletCollection property="gestureRecognizers" destination="cTT-el-nmd" appends="YES" id="ndY-uj-Piq"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-t7-xFK">
-                                                        <rect key="frame" x="0.0" y="118" width="117.5" height="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Bestrating" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrI-t7-xFK">
+                                                        <rect key="frame" x="0.0" y="115.5" width="117.5" height="20.5"/>
                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.54509803921568623" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Bestrating">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="PrI-t7-xFK" firstAttribute="height" secondItem="SHX-LT-azw" secondAttribute="height" multiplier="0.15" id="to9-gl-5fu"/>
+                                                    <constraint firstItem="Wlq-E7-TRy" firstAttribute="height" secondItem="SHX-LT-azw" secondAttribute="height" multiplier="0.85" id="xwE-Ke-8jD"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -139,7 +128,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="117.5" height="135.5"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-V5-ull">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="115.5"/>
                                                         <color key="backgroundColor" red="0.62745098039215685" green="0.83137254901960778" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -149,58 +138,52 @@
                                                             <outletCollection property="gestureRecognizers" destination="ZVM-kw-Ay7" appends="YES" id="dg5-3D-Gur"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUb-be-4wV">
-                                                        <rect key="frame" x="0.0" y="118" width="117.5" height="17.5"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Groen" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUb-be-4wV">
+                                                        <rect key="frame" x="0.0" y="115.5" width="117.5" height="20"/>
                                                         <color key="backgroundColor" red="0.5490196078431373" green="0.75686274509803919" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Groen">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ps0-V5-ull" firstAttribute="height" secondItem="lhM-93-gVx" secondAttribute="height" multiplier="0.85" id="Ku5-7K-Lgn"/>
+                                                    <constraint firstItem="JUb-be-4wV" firstAttribute="height" secondItem="lhM-93-gVx" secondAttribute="height" multiplier="0.15" id="igq-H7-DkV"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xKP-hv-Oah">
                                                 <rect key="frame" x="125.5" y="0.0" width="118" height="135.5"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-S9-uxQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="117.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="115.5"/>
                                                         <color key="backgroundColor" red="0.28235294117647058" green="0.81176470588235294" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="tintColor" red="0.73190962010000005" green="1" blue="0.24545052040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Koz-S9-uxQ" secondAttribute="height" multiplier="1:1" id="qLi-ud-n1x"/>
+                                                            <constraint firstAttribute="width" secondItem="Koz-S9-uxQ" secondAttribute="height" multiplier="1:1" priority="900" id="qLi-ud-n1x"/>
                                                         </constraints>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="5Xc-c5-1DC" appends="YES" id="5Mh-xG-nLB"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmO-eU-YUA">
-                                                        <rect key="frame" x="0.0" y="117.5" width="118" height="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Smerig" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmO-eU-YUA">
+                                                        <rect key="frame" x="0.0" y="115.5" width="118" height="20"/>
                                                         <color key="backgroundColor" red="0.21568627450980393" green="0.73725490196078436" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Smerig">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Koz-S9-uxQ" firstAttribute="height" secondItem="xKP-hv-Oah" secondAttribute="height" multiplier="0.85" id="QFo-TS-Mhh"/>
+                                                    <constraint firstItem="MmO-eU-YUA" firstAttribute="height" secondItem="xKP-hv-Oah" secondAttribute="height" multiplier="0.15" id="jV3-Xr-Z0l"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-fG-tsu">
                                                 <rect key="frame" x="251.5" y="0.0" width="117.5" height="135.5"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-VY-pLT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="117.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="115.5"/>
                                                         <color key="backgroundColor" red="0.30980392156862746" green="0.75686274509803919" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -210,21 +193,18 @@
                                                             <outletCollection property="gestureRecognizers" destination="F39-aZ-Fj3" appends="YES" id="ZwK-K6-eeD"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUb-YT-6s8">
-                                                        <rect key="frame" x="0.0" y="117.5" width="117.5" height="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Overlast" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUb-YT-6s8">
+                                                        <rect key="frame" x="0.0" y="115.5" width="117.5" height="20"/>
                                                         <color key="backgroundColor" red="0.23137254901960785" green="0.68627450980392157" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Overlast">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="cuc-VY-pLT" firstAttribute="height" secondItem="fw2-fG-tsu" secondAttribute="height" multiplier="0.85" id="1cV-lm-qqh"/>
+                                                    <constraint firstItem="XUb-YT-6s8" firstAttribute="height" secondItem="fw2-fG-tsu" secondAttribute="height" multiplier="0.15" id="PuG-S5-cEg"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -235,7 +215,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="117.5" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-EO-jsx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="115.5"/>
                                                         <color key="backgroundColor" red="0.31372549019607843" green="0.61176470588235299" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -245,57 +225,51 @@
                                                             <outletCollection property="gestureRecognizers" destination="1tm-9c-NMp" appends="YES" id="JbR-8O-Fca"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOm-3K-ufV">
-                                                        <rect key="frame" x="0.0" y="118" width="117.5" height="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Overig" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOm-3K-ufV">
+                                                        <rect key="frame" x="0.0" y="115.5" width="117.5" height="20.5"/>
                                                         <color key="backgroundColor" red="0.29019607843137252" green="0.53725490196078429" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Overig">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ePA-EO-jsx" firstAttribute="height" secondItem="FAz-Pz-YHl" secondAttribute="height" multiplier="0.85" id="Aym-MZ-eWP"/>
+                                                    <constraint firstItem="tOm-3K-ufV" firstAttribute="height" secondItem="FAz-Pz-YHl" secondAttribute="height" multiplier="0.15" id="w9A-16-uaI"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ydR-lw-isU">
                                                 <rect key="frame" x="125.5" y="0.0" width="118" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-GQ-bFk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="115.5"/>
                                                         <color key="backgroundColor" red="0.92549019607843142" green="0.52941176470588236" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="G2q-GQ-bFk" secondAttribute="height" multiplier="1:1" id="L99-vp-Xm3"/>
+                                                            <constraint firstAttribute="width" secondItem="G2q-GQ-bFk" secondAttribute="height" multiplier="1:1" priority="900" id="L99-vp-Xm3"/>
                                                         </constraints>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="LzA-Bf-Gy2" appends="YES" id="o2t-hO-2al"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reb-4T-ZEe">
-                                                        <rect key="frame" x="0.0" y="118" width="118" height="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Uitleg" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reb-4T-ZEe">
+                                                        <rect key="frame" x="0.0" y="115.5" width="118" height="20.5"/>
                                                         <color key="backgroundColor" red="0.84313725490196079" green="0.4392156862745098" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Uitleg">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="G2q-GQ-bFk" firstAttribute="height" secondItem="ydR-lw-isU" secondAttribute="height" multiplier="0.85" id="c8e-70-ehf"/>
+                                                    <constraint firstItem="Reb-4T-ZEe" firstAttribute="height" secondItem="ydR-lw-isU" secondAttribute="height" multiplier="0.15" id="fbj-MF-9bk"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1oi-JQ-M4e">
                                                 <rect key="frame" x="251.5" y="0.0" width="117.5" height="136"/>
                                                 <subviews>
                                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wb0-L5-Qlk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="118"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="115.5"/>
                                                         <color key="backgroundColor" red="0.67450980392156867" green="0.5725490196078431" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                         <constraints>
@@ -305,21 +279,18 @@
                                                             <outletCollection property="gestureRecognizers" destination="zpy-da-n2T" appends="YES" id="Try-0p-okz"/>
                                                         </connections>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKB-5k-hYd">
-                                                        <rect key="frame" x="0.0" y="118" width="117.5" height="18"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" text="Chatten" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKB-5k-hYd">
+                                                        <rect key="frame" x="0.0" y="115.5" width="117.5" height="20.5"/>
                                                         <color key="backgroundColor" red="0.58823529411764708" green="0.47843137254901957" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Chatten">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Wb0-L5-Qlk" firstAttribute="height" secondItem="1oi-JQ-M4e" secondAttribute="height" multiplier="0.85" id="O76-mu-wqa"/>
+                                                    <constraint firstItem="JKB-5k-hYd" firstAttribute="height" secondItem="1oi-JQ-M4e" secondAttribute="height" multiplier="0.15" id="r0e-kG-qVb"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -345,6 +316,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oLJ-np-MpH"/>
                     <connections>
+                        <outlet property="image" destination="A4a-HK-MqG" id="ngk-zQ-rfZ"/>
                         <segue destination="jRR-yO-vNF" kind="show" identifier="cameraSegue" id="s9c-Q7-FNI"/>
                         <segue destination="mKx-Q1-7OY" kind="show" identifier="mapSegue" id="GJV-Ba-9oL"/>
                     </connections>
