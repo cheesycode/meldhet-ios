@@ -16,4 +16,5 @@ struct Issue : Decodable {
     let lon: Float
     let tag: String
     let id: String
+    var status: String?
 }

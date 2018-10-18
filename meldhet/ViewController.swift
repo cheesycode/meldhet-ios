@@ -14,9 +14,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     var type : String = ""
     
     @IBAction func onImageClicked(_ sender: UITapGestureRecognizer) {
-        self.type = sender.name as! String
+        self.type = sender.name!
         
-        print(sender.name as! String)
+        print(sender.name!)
         self.imagePicker = UIImagePickerController()
         self.imagePicker.delegate = self
         self.imagePicker.sourceType = .camera
@@ -31,9 +31,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.performSegue(withIdentifier: "cameraSegue", sender: self)
     }
     
-<<<<<<< HEAD
+
     @IBAction func onChatClickedHandler(_ sender: Any) {
-=======
+        self.performSegue(withIdentifier: "mapSegue", sender: sender)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "cameraSegue"){
             if let dest = segue.destination as? UploadViewController {
@@ -42,14 +44,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
     }
-
-    @IBAction func onChatClickedHandler(_ sender: UITapGestureRecognizer) {
-        print(sender.name as! String)
-        
->>>>>>> origin/addCameraFunctionality
-        self.performSegue(withIdentifier: "mapSegue", sender: sender)
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

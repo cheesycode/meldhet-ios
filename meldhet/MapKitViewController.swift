@@ -73,6 +73,8 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                         let loc = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                         
                         annotation.coordinate = loc
+                        annotation.title = issue.tag
+                        annotation.subtitle = issue.status
                         self.mapView.addAnnotation(annotation)
                     }
                 }
@@ -88,13 +90,13 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         print("You clicked on issue: " + annotation.issue.id)
     }
     
-    public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    /*func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let _annotation = annotation as! IssueAnnotation
         let pinAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: _annotation.id)
 
         
         return pinAnnotationView
-    }
+    }*/
 
     /*
     // MARK: - Navigation

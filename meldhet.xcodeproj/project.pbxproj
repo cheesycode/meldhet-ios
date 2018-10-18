@@ -67,7 +67,7 @@
 		7D55A89B216F82F50042B5E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7D91D53821773B49003983E0 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		7D91D53C21777043003983E0 /* IssueAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueAnnotation.swift; sourceTree = "<group>"; };
-		7D91D5402177713B003983E0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Issue.swift; path = meldhet/Issue.swift; sourceTree = "<group>"; };
+		7D91D5402177713B003983E0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		843B66252177660C00EA9BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8471664221777233007E3856 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetUITests/Pods-meldhetUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,6 @@
 		7D31C257216B96D60070530F = {
 			isa = PBXGroup;
 			children = (
-				7D91D5402177713B003983E0 /* Issue.swift */,
 				7D31C262216B96D60070530F /* meldhet */,
 				7D31C27A216B96D70070530F /* meldhetTests */,
 				7D31C285216B96D70070530F /* meldhetUITests */,
@@ -147,6 +146,7 @@
 		7D31C262216B96D60070530F /* meldhet */ = {
 			isa = PBXGroup;
 			children = (
+				7D91D5402177713B003983E0 /* Issue.swift */,
 				843B66252177660C00EA9BBF /* GoogleService-Info.plist */,
 				7D55A898216F370C0042B5E1 /* meldhet.entitlements */,
 				7D31C263216B96D60070530F /* AppDelegate.swift */,
