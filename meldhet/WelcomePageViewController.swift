@@ -82,7 +82,6 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDataS
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }
-        
         let previousIndex = viewControllerIndex - 1
         
         guard previousIndex >= 0 else {
@@ -95,7 +94,6 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDataS
         
         return orderedViewControllers[previousIndex]
     }
-    
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
@@ -106,6 +104,7 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDataS
         let orderedViewControllersCount = orderedViewControllers.count
         
         guard orderedViewControllersCount != nextIndex else {
+            skip()
             return nil
         }
         

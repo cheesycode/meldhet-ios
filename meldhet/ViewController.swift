@@ -37,7 +37,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         //finally presenting the dialog box
         self.present(alertController, animated: true, completion: nil)
     }
-    
+    @IBAction func infoClicked(_ sender: UITapGestureRecognizer){
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func onImageClicked(_ sender: UITapGestureRecognizer) {
         self.type = sender.name!
         print(sender.name!)
