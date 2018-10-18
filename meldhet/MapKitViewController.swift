@@ -24,6 +24,10 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         super.init(coder: aDecoder)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
