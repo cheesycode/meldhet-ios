@@ -152,16 +152,57 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                         
                         self.performSegue(withIdentifier: "chatSegue", sender: annotation.issue)
                     } else {
-                        print("Messages not array...?")
+                        let alertController = UIAlertController(title: "Nog geen reactie", message: "Helaas is deze zaak nog niet in behandeling genomen. Zodra dit gebeurd krijgt u een notificatie.", preferredStyle: .alert)
+                        
+                        //the confirm action taking the inputs
+                        let confirmAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                            
+                            //getting the input values from user
+                            
+                        }
+            
+                        
+                        //adding the action to dialogbox
+                        alertController.addAction(confirmAction)
+                        //finally presenting the dialog box
+                        self.present(alertController, animated: true, completion: nil)
                     }
                 } catch let error as NSError {
                     print("Unable to parse JSON")
                     print(error.localizedDescription)
+                    let alertController = UIAlertController(title: "Nog geen reactie", message: "Helaas is deze zaak nog niet in behandeling genomen. Zodra dit gebeurd krijgt u een notificatie.", preferredStyle: .alert)
+                    
+                    //the confirm action taking the inputs
+                    let confirmAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                        
+                        //getting the input values from user
+                        
+                    }
+                    
+                    
+                    //adding the action to dialogbox
+                    alertController.addAction(confirmAction)
+                    //finally presenting the dialog box
+                    self.present(alertController, animated: true, completion: nil)
                 }
                 
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                let alertController = UIAlertController(title: "Nog geen reactie", message: "Helaas is deze zaak nog niet in behandeling genomen. Zodra dit gebeurd krijgt u een notificatie.", preferredStyle: .alert)
+                
+                //the confirm action taking the inputs
+                let confirmAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                    
+                    //getting the input values from user
+                    
+                }
+                
+                
+                //adding the action to dialogbox
+                alertController.addAction(confirmAction)
+                //finally presenting the dialog box
+                self.present(alertController, animated: true, completion: nil)
             }
         }
     }

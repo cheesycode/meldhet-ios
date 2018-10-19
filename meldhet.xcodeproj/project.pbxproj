@@ -648,10 +648,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAA852DEC99ED88A2CAA8797 /* Pods-meldhet.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8W4QGMSQQ;
+				DEVELOPMENT_TEAM = 842Q3U739U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
@@ -667,7 +667,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
+				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -679,16 +679,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3CBD874287F8E2201C91BADC /* Pods-meldhet.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8W4QGMSQQ;
+				DEVELOPMENT_TEAM = 842Q3U739U;
 				INFOPLIST_FILE = meldhet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
+				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
