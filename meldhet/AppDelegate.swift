@@ -23,6 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Auth.auth().signInAnonymously() { (authResult, error) in
             print(error.debugDescription)
         }
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            defaults.synchronize()
+            return true
+        }
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "mainViewController") as! ViewController
+            let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
+            navigationController.pushViewController(viewController, animated: true)
+            self.window?.rootViewController = navigationController
+            self.window?.makeKeyAndVisible()
+        
+        
         return true
     }
 
