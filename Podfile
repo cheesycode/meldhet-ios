@@ -11,6 +11,7 @@ target 'meldhet' do
     pod 'Firebase/Auth'
     pod 'Alamofire', '~> 4.7'
     pod 'KDCircularProgress'
+    pod 'SwiftyJSON', '~> 4.0'
 
   target 'meldhetTests' do
     inherit! :search_paths

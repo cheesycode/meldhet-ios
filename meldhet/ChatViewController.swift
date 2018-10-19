@@ -41,24 +41,24 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return (issue?.messages?.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let _cell = tableView.dequeueReusableCell(withIdentifier: "receiveCell", for: indexPath)
         let cell = _cell as! MessageViewTableViewCell
         let index = indexPath.row
+        let msg = self.issue?.messages![index]
         
-        cell.messageTextView.text = "Dit is een test message van Bob! Dit is een test message van Bob! Dit is een test message van Bob! Dit is een test message van Bob! Dit is een test message van Bob! Dit is een test message van Bob!"
+        cell.messageTextView.text = msg?.body
         
-        if index % 2 == 0 {
+        if msg?.recipient == AppDelegate.deviceID {
             cell.messageTextView.backgroundColor = UIColor(red: 0xFF, green: 0xCE, blue: 0x54)
         } else {
             cell.messageTextView.backgroundColor = UIColor(red: 0x4F, green: 0xC1, blue: 0xE9)
         }
         
         cell.messageTextView.layer.cornerRadius = 8
-
         cell.setUpContentWrap()
         
         //cell.textLabel?.text = "Bob"

@@ -23,6 +23,7 @@
 		7D3751E62178C01A00A5EDF7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3751E52178C01A00A5EDF7 /* UIColorExtension.swift */; };
 		7D55A89A216F51820042B5E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A899216F51820042B5E1 /* AVFoundation.framework */; };
 		7D55A89C216F82F50042B5E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A89B216F82F50042B5E1 /* MapKit.framework */; };
+		7D6D91F42179FB79008809F4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D91F32179FB79008809F4 /* Message.swift */; };
 		7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53821773B49003983E0 /* MapKitViewController.swift */; };
 		7D91D53D21777043003983E0 /* IssueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53C21777043003983E0 /* IssueAnnotation.swift */; };
 		7D91D5412177713B003983E0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D5402177713B003983E0 /* Issue.swift */; };
@@ -73,6 +74,7 @@
 		7D55A898216F370C0042B5E1 /* meldhet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = meldhet.entitlements; sourceTree = "<group>"; };
 		7D55A899216F51820042B5E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7D55A89B216F82F50042B5E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D6D91F32179FB79008809F4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7D91D53821773B49003983E0 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		7D91D53C21777043003983E0 /* IssueAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueAnnotation.swift; sourceTree = "<group>"; };
 		7D91D5402177713B003983E0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				7D3751DD21788E5B00A5EDF7 /* ChatViewController.swift */,
 				7D3751E32178B13800A5EDF7 /* MessageViewTableViewCell.swift */,
 				7D3751E52178C01A00A5EDF7 /* UIColorExtension.swift */,
+				7D6D91F32179FB79008809F4 /* Message.swift */,
 			);
 			path = meldhet;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/KDCircularProgress/KDCircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -418,6 +422,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +468,7 @@
 				7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */,
 				8429F7FE2178E4DE002FC1E6 /* WelcomePageViewController.swift in Sources */,
 				7D91D53D21777043003983E0 /* IssueAnnotation.swift in Sources */,
+				7D6D91F42179FB79008809F4 /* Message.swift in Sources */,
 				7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */,
 				7D3751E62178C01A00A5EDF7 /* UIColorExtension.swift in Sources */,
 				7D91D5412177713B003983E0 /* Issue.swift in Sources */,

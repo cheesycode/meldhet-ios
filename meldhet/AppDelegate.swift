@@ -13,16 +13,16 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    static var deviceID : String?
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         FirebaseApp.configure()
         Auth.auth().signInAnonymously() { (authResult, error) in
             print(error.debugDescription)
         }
+        
+        AppDelegate.deviceID = "ciRn07FS06w:APA91bHsNYB4sLUSN8DNoiFsd-2fNnknun3dmTtfGCcPtFpdsGtGADjY36UgqvBvs-6ik_UNSjGd_m17nII1NDdBaPQk58h4i73SoqDRVoihTHYiGlw4YDD-tYlcfkaQ0e4O9-m10Xqh"
         return true
     }
 

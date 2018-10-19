@@ -17,4 +17,5 @@ struct Issue : Decodable {
     let tag: String
     let id: String
     var status: String?
+    var messages: [Message]?
 }

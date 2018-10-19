@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
-import MapKit;
+import MapKit
+import Alamofire
+import SwiftyJSON
 
 class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     var geoLocation : CLLocationManager
+    var issues : [Issue]? = nil
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)   {
         self.geoLocation = CLLocationManager()
@@ -55,7 +58,7 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     private func loadIssues() {
-        let urlString = URL(string: "https://api.meldhet.cheesycode.com/v1/issues/get?id=ciRn07FS06w:APA91bHsNYB4sLUSN8DNoiFsd-2fNnknun3dmTtfGCcPtFpdsGtGADjY36UgqvBvs-6ik_UNSjGd_m17nII1NDdBaPQk58h4i73SoqDRVoihTHYiGlw4YDD-tYlcfkaQ0e4O9-m10Xqh")
+        let urlString = URL(string: "https://api.meldhet.cheesycode.com/v1/issues/get?id=" + AppDelegate.deviceID!)
         
         let session = URLSession.shared
         if let usableUrl = urlString {
@@ -70,6 +73,8 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                         return;
                     }
                     
+                    self.issues = json
+                    
                     for issue in json {
                         let annotation = IssueAnnotation(id: issue.id, issue: issue)
                         let lat = CLLocationDegrees(issue.lat)
@@ -80,6 +85,8 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                         annotation.title = issue.tag
                         annotation.subtitle = issue.status
                         self.mapView.addAnnotation(annotation)
+                        
+                        print(issue.id)
                     }
                 }
             })
@@ -90,9 +97,44 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let annotation = view.annotation as! IssueAnnotation
+        let issue = annotation.issue
         
         print("You clicked on issue: " + annotation.issue.id)
-        self.performSegue(withIdentifier: "chatSegue", sender: annotation.issue)
+        
+        Alamofire.request("https://api.meldhet.cheesycode.com/v1/messages/getall?issue=" + issue.id,method:.get, encoding: JSONEncoding.default).validate().responseJSON {
+            response in
+            switch response.result {
+            case .success:
+                print("Validation Successful")
+                
+                do {
+                    let json = try JSON(data: response.data!)
+                    if let items = json.array {
+                        annotation.issue.messages = [Message]()
+                        for item in items {
+                            let msg = Message()
+                            msg.body = item["body"].string
+                            msg.issue = item["issue"].string
+                            msg.recipient = item["recipient"].string
+                            msg.sender = item["sender"].string
+                            
+                            annotation.issue.messages!.append(msg)
+                        }
+                        
+                        self.performSegue(withIdentifier: "chatSegue", sender: annotation.issue)
+                    } else {
+                        print("Messages not array...?")
+                    }
+                } catch let error as NSError {
+                    print("Unable to parse JSON")
+                    print(error.localizedDescription)
+                }
+                
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     /*func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
