@@ -23,7 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         CoreDataHelper(appDelegate: UIApplication.shared.delegate as! AppDelegate)
         
-        AppDelegate.deviceID = "ciRn07FS06w:APA91bHsNYB4sLUSN8DNoiFsd-2fNnknun3dmTtfGCcPtFpdsGtGADjY36UgqvBvs-6ik_UNSjGd_m17nII1NDdBaPQk58h4i73SoqDRVoihTHYiGlw4YDD-tYlcfkaQ0e4O9-m10Xqh"
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Unable to load Firebase device token!")
+                print(error.localizedDescription)
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+                AppDelegate.deviceID = result.token
+            }
+        }
 
         let defaults = UserDefaults.standard
         if defaults.object(forKey: "isFirstTime") == nil {

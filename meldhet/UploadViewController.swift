@@ -65,34 +65,27 @@ class UploadViewController: UIViewController, CLLocationManagerDelegate {
     
     func sendDataToServer(filepath : String) {
         self.progress.animate(toAngle: 345, duration: 1, completion: nil)
-        InstanceID.instanceID().instanceID { (result, error) in
-            if let error = error {
-                self.error(error: error.localizedDescription)
-            } else if let result = result {
-                print("Remote instance ID token: \(result.token)")
-                let parameters = [
-                    "id": result.token,
-                    "image": filepath,
-                    "tag": self.type,
-                    "lat": String(format:"%f",self.location.coordinate.latitude),
-                    "lon": String(format:"%f",self.location.coordinate.longitude),
-                    "acc": String(format:"%f",self.location.horizontalAccuracy)
-                ]
-                Alamofire.request("https://api.meldhet.cheesycode.com/v1/issues/create/",method:.post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
-                    switch response.result {
-                    case .success:
-                        print("Validation Successful")
-                       
-                        self.progress.animate(toAngle: 360, duration: 1, completion: { (Bool) in
-                            self.progress.set(colors: UIColor.green)
-                            self.titleThnx.isHidden = false
-                            self.messageText.isHidden = false
-                            self.sendAgain.isHidden = false
-                        })
-                    case .failure(let error):
-                        self.error(error: error.localizedDescription);
-                    }
-                }
+        let parameters = [
+            "id": AppDelegate.deviceID!,
+            "image": filepath,
+            "tag": self.type,
+            "lat": self.location.coordinate.latitude,
+            "lon": self.location.coordinate.longitude,
+            "acc": self.location.horizontalAccuracy
+            ] as [String : Any]
+        Alamofire.request("https://api.meldhet.cheesycode.com/v1/issues/create/",method:.post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                print("Validation Successful")
+                
+                self.progress.animate(toAngle: 360, duration: 1, completion: { (Bool) in
+                    self.progress.set(colors: UIColor.green)
+                    self.titleThnx.isHidden = false
+                    self.messageText.isHidden = false
+                    self.sendAgain.isHidden = false
+                })
+            case .failure(let error):
+                self.error(error: error.localizedDescription);
             }
         }
     }
