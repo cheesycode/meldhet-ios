@@ -35,9 +35,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func keyboarWillHide(notification: NSNotification){
-        let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
         self.view.layoutIfNeeded()
-        
         UIView.animate(withDuration: 0, animations:{
             self.view.layoutIfNeeded()
             self.bottomConstraint.constant = 8

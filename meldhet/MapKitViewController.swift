@@ -58,8 +58,11 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     private func loadIssues() {
+
         let urlString = URL(string: "https://api.meldhet.cheesycode.com/v1/issues/get?id=" + AppDelegate.deviceID!)
+        var coredata = CoreDataHelper()
         
+        drawAnnotation(issues: coredata.getList())
         let session = URLSession.shared
         if let usableUrl = urlString {
             let task = session.dataTask(with: usableUrl, completionHandler: { (data, response, error) in
@@ -67,32 +70,42 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                     if let stringData = String(data: data, encoding: String.Encoding.utf8) {
                         print(stringData)
                     }
-                    
+
                     guard let json = try? JSONDecoder().decode([Issue].self, from: data) else {
                         print("Error unable to deserialize issue's")
                         return;
                     }
-                    
+
                     self.issues = json
                     
-                    for issue in json {
-                        let annotation = IssueAnnotation(id: issue.id, issue: issue)
-                        let lat = CLLocationDegrees(issue.lat)
-                        let lon = CLLocationDegrees(issue.lon)
-                        let loc = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-                        
-                        annotation.coordinate = loc
-                        annotation.title = issue.tag
-                        annotation.subtitle = issue.status
-                        self.mapView.addAnnotation(annotation)
-                        
-                        print(issue.id)
-                    }
+                    self.drawAnnotation(issues: self.issues!)
+                    
                 }
             })
          
             task.resume()
         }
+    }
+    
+    func drawAnnotation(issues : [Issue]){
+        for issue in issues {
+            let annotation = IssueAnnotation(id: issue.id, issue: issue)
+            let lat = CLLocationDegrees(issue.lat)
+            let lon = CLLocationDegrees(issue.lon)
+            let loc = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            
+            annotation.coordinate = loc
+            annotation.title = issue.tag
+            annotation.subtitle = issue.status
+            self.mapView.addAnnotation(annotation)
+            
+            print(issue.id)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        CoreDataHelper().writeList(issues: self.issues!)
+        super.viewWillDisappear(true)
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {

@@ -8,14 +8,24 @@
 
 import Foundation
 
-struct Issue : Decodable {
-    let acc: Float
-    let creator: String
-    let image: String
-    let lat: Float
-    let lon: Float
-    let tag: String
-    let id: String
+class Issue : Decodable {
+    init(acc : Float, creator : String, image :String, lat: Float, lon: Float, tag: String, id: String, status: String?) {
+        self.acc = acc
+        self.creator = creator
+        self.image = image
+        self.lat = lat
+        self.lon = lon
+        self.tag = tag
+        self.id = id
+        self.status = status
+    }
+    var acc: Float
+    var creator: String
+    var image: String
+    var lat: Float
+    var lon: Float
+    var tag: String
+    var id: String
     var status: String?
     var messages: [Message]?
 }

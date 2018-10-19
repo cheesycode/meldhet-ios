@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Auth.auth().signInAnonymously() { (authResult, error) in
             print(error.debugDescription)
         }
+        CoreDataHelper(appDelegate: UIApplication.shared.delegate as! AppDelegate)
         
         AppDelegate.deviceID = "ciRn07FS06w:APA91bHsNYB4sLUSN8DNoiFsd-2fNnknun3dmTtfGCcPtFpdsGtGADjY36UgqvBvs-6ik_UNSjGd_m17nII1NDdBaPQk58h4i73SoqDRVoihTHYiGlw4YDD-tYlcfkaQ0e4O9-m10Xqh"
 

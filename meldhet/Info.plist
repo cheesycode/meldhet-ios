@@ -27,9 +27,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This app will use the camera.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Your location is required.</string>
+	<string>Uw locatie wordt gebruikt om de locatie van uw melding te bepalen</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location is required.</string>
+	<string>Uw locatie wordt gebruikt om de locatie van uw melding te bepalen</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Please allow access to save photo in your photo library</string>
 	<key>NSPhotoLibraryUsageDescription</key>

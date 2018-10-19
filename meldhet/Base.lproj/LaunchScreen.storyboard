@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZMu-Na-Yj0">
-                                <rect key="frame" x="119" y="489" width="137.5" height="137.5"/>
+                                <rect key="frame" x="177.5" y="486" width="20" height="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZMu-Na-Yj0" secondAttribute="height" multiplier="1:1" id="eEy-YF-op4"/>
@@ -35,13 +35,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.62745098039215685" green="0.83137254901960778" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZMu-Na-Yj0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="2hd-ld-GX3"/>
                             <constraint firstItem="KHx-ul-4U4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Bn9-e2-yAC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KHx-ul-4U4" secondAttribute="trailing" constant="50" id="Ci5-LO-Zc4"/>
+                            <constraint firstItem="ZMu-Na-Yj0" firstAttribute="top" secondItem="KHx-ul-4U4" secondAttribute="bottom" constant="5" id="J80-s0-mlq"/>
                             <constraint firstItem="KHx-ul-4U4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qdd-O1-GEk"/>
-                            <constraint firstItem="ZMu-Na-Yj0" firstAttribute="width" secondItem="KHx-ul-4U4" secondAttribute="width" multiplier="0.5" id="SeJ-4R-lqC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZMu-Na-Yj0" secondAttribute="trailing" constant="118.5" id="VgG-bX-Apj"/>
-                            <constraint firstItem="ZMu-Na-Yj0" firstAttribute="top" secondItem="KHx-ul-4U4" secondAttribute="bottom" constant="8" id="epA-Zh-1Xm"/>
+                            <constraint firstItem="ZMu-Na-Yj0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="j84-bS-fyd"/>
                             <constraint firstItem="KHx-ul-4U4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kGX-C0-8Om"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

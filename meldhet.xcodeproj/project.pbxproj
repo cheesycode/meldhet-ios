@@ -29,6 +29,7 @@
 		7D91D5412177713B003983E0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D5402177713B003983E0 /* Issue.swift */; };
 		8429F7FE2178E4DE002FC1E6 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429F7FD2178E4DE002FC1E6 /* WelcomePageViewController.swift */; };
 		8429F8002178F22A002FC1E6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429F7FF2178F22A002FC1E6 /* WelcomeViewController.swift */; };
+		8429F80A217A0AD7002FC1E6 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429F809217A0AD7002FC1E6 /* CoreDataHelper.swift */; };
 		843B66262177660C00EA9BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843B66252177660C00EA9BBF /* GoogleService-Info.plist */; };
 		8471664321777233007E3856 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471664221777233007E3856 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		7D91D5402177713B003983E0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		8429F7FD2178E4DE002FC1E6 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		8429F7FF2178F22A002FC1E6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8429F809217A0AD7002FC1E6 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		843B66252177660C00EA9BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8471664221777233007E3856 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetUITests/Pods-meldhetUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				7D3751E32178B13800A5EDF7 /* MessageViewTableViewCell.swift */,
 				7D3751E52178C01A00A5EDF7 /* UIColorExtension.swift */,
 				7D6D91F32179FB79008809F4 /* Message.swift */,
+				8429F809217A0AD7002FC1E6 /* CoreDataHelper.swift */,
 			);
 			path = meldhet;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				8429F7FE2178E4DE002FC1E6 /* WelcomePageViewController.swift in Sources */,
 				7D91D53D21777043003983E0 /* IssueAnnotation.swift in Sources */,
 				7D6D91F42179FB79008809F4 /* Message.swift in Sources */,
+				8429F80A217A0AD7002FC1E6 /* CoreDataHelper.swift in Sources */,
 				7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */,
 				7D3751E62178C01A00A5EDF7 /* UIColorExtension.swift in Sources */,
 				7D91D5412177713B003983E0 /* Issue.swift in Sources */,
@@ -667,7 +671,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -688,7 +692,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
