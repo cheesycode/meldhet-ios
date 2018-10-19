@@ -496,91 +496,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-o7-KbC">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-5n-Gxv">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="463.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiveCell" rowHeight="95" id="yXN-ow-tgg" customClass="MessageViewTableViewCell" customModule="meldhet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="320" height="95"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yXN-ow-tgg" id="fXe-Uh-0z2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-5n-Gxv">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiveCell" rowHeight="95" id="yXN-ow-tgg" customClass="MessageViewTableViewCell" customModule="meldhet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yXN-ow-tgg" id="fXe-Uh-0z2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1S3-1r-a94">
+                                                    <rect key="frame" x="16" y="16" width="288" height="62.5"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1S3-1r-a94">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSm-MQ-S2w">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-Up-IQQ">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="320" height="74"/>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </string>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                                </textView>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSm-MQ-S2w">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-Up-IQQ">
+                                                            <rect key="frame" x="0.0" y="28.5" width="288" height="34"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="1S3-1r-a94" firstAttribute="top" secondItem="fXe-Uh-0z2" secondAttribute="top" id="O50-0g-QXl"/>
-                                                        <constraint firstAttribute="bottom" secondItem="1S3-1r-a94" secondAttribute="bottom" id="Y9k-za-Mv5"/>
-                                                        <constraint firstItem="1S3-1r-a94" firstAttribute="leading" secondItem="fXe-Uh-0z2" secondAttribute="leading" id="apj-9R-tjh"/>
-                                                        <constraint firstAttribute="trailing" secondItem="1S3-1r-a94" secondAttribute="trailing" id="n1H-qX-YmL"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="messageTextView" destination="kMk-Up-IQQ" id="j0o-3u-LJX"/>
-                                                    <outlet property="senderTextView" destination="QSm-MQ-S2w" id="GFJ-TW-afj"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1S3-1r-a94" firstAttribute="top" secondItem="fXe-Uh-0z2" secondAttribute="top" constant="16" id="O50-0g-QXl"/>
+                                                <constraint firstAttribute="bottom" secondItem="1S3-1r-a94" secondAttribute="bottom" constant="16" id="Y9k-za-Mv5"/>
+                                                <constraint firstItem="1S3-1r-a94" firstAttribute="leading" secondItem="fXe-Uh-0z2" secondAttribute="leading" constant="16" id="apj-9R-tjh"/>
+                                                <constraint firstAttribute="trailing" secondItem="1S3-1r-a94" secondAttribute="trailing" constant="16" id="n1H-qX-YmL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dataSource" destination="fgo-3w-Etb" id="cqy-OZ-1gY"/>
-                                            <outlet property="delegate" destination="fgo-3w-Etb" id="dHW-UU-182"/>
+                                            <outlet property="marginLeft" destination="apj-9R-tjh" id="yW3-OZ-WQE"/>
+                                            <outlet property="marginRight" destination="n1H-qX-YmL" id="3qu-mR-QQr"/>
+                                            <outlet property="messageTextView" destination="kMk-Up-IQQ" id="j0o-3u-LJX"/>
+                                            <outlet property="senderTextView" destination="QSm-MQ-S2w" id="GFJ-TW-afj"/>
                                         </connections>
-                                    </tableView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keg-YX-k1j">
-                                        <rect key="frame" x="0.0" y="463.5" width="320" height="40.5"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftT-pL-VkZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="40.5"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdt-er-zZb">
-                                                <rect key="frame" x="256" y="0.0" width="64" height="40.5"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="wdt-er-zZb" firstAttribute="width" secondItem="keg-YX-k1j" secondAttribute="width" multiplier="0.2" id="wL5-N8-pIw"/>
-                                        </constraints>
-                                    </stackView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fgo-3w-Etb" id="cqy-OZ-1gY"/>
+                                    <outlet property="delegate" destination="fgo-3w-Etb" id="dHW-UU-182"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keg-YX-k1j">
+                                <rect key="frame" x="5" y="527" width="315" height="33"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftT-pL-VkZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="220.5" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdt-er-zZb">
+                                        <rect key="frame" x="220.5" y="0.0" width="94.5" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Versturen"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="keg-YX-k1j" firstAttribute="height" secondItem="AIv-o7-KbC" secondAttribute="height" multiplier="0.08" id="Gqo-sl-U7E"/>
+                                    <constraint firstItem="wdt-er-zZb" firstAttribute="width" secondItem="keg-YX-k1j" secondAttribute="width" multiplier="0.3" id="wL5-N8-pIw"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AIv-o7-KbC" firstAttribute="leading" secondItem="Tc1-Ig-tAZ" secondAttribute="leading" id="Etr-k5-AJH"/>
-                            <constraint firstItem="Tc1-Ig-tAZ" firstAttribute="trailing" secondItem="AIv-o7-KbC" secondAttribute="trailing" id="T3r-5O-teN"/>
-                            <constraint firstItem="AIv-o7-KbC" firstAttribute="top" secondItem="Tc1-Ig-tAZ" secondAttribute="top" id="fRK-uU-ZKf"/>
-                            <constraint firstItem="Tc1-Ig-tAZ" firstAttribute="bottom" secondItem="AIv-o7-KbC" secondAttribute="bottom" id="uTf-oF-p82"/>
+                            <constraint firstItem="keg-YX-k1j" firstAttribute="top" secondItem="GlI-5n-Gxv" secondAttribute="bottom" constant="8" id="4xL-bs-NIA"/>
+                            <constraint firstItem="Tc1-Ig-tAZ" firstAttribute="trailing" secondItem="keg-YX-k1j" secondAttribute="trailing" id="A9Z-15-a1D"/>
+                            <constraint firstItem="keg-YX-k1j" firstAttribute="leading" secondItem="Tc1-Ig-tAZ" secondAttribute="leading" constant="5" id="BJj-mz-6dx"/>
+                            <constraint firstItem="GlI-5n-Gxv" firstAttribute="trailing" secondItem="Tc1-Ig-tAZ" secondAttribute="trailing" id="HhN-nB-pH0"/>
+                            <constraint firstItem="GlI-5n-Gxv" firstAttribute="leading" secondItem="Tc1-Ig-tAZ" secondAttribute="leading" id="qK3-Bd-8Li"/>
+                            <constraint firstItem="GlI-5n-Gxv" firstAttribute="top" secondItem="Tc1-Ig-tAZ" secondAttribute="top" id="tFY-rt-G52"/>
+                            <constraint firstItem="Tc1-Ig-tAZ" firstAttribute="bottom" secondItem="keg-YX-k1j" secondAttribute="bottom" constant="8" id="yY5-KF-shQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tc1-Ig-tAZ"/>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="yY5-KF-shQ" id="vJO-8T-SEr"/>
                         <outlet property="chatTextView" destination="ftT-pL-VkZ" id="JY2-7K-vuQ"/>
                         <outlet property="tableView" destination="GlI-5n-Gxv" id="MEO-Dw-joW"/>
                     </connections>
