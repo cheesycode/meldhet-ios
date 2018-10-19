@@ -559,6 +559,9 @@
                                         <rect key="frame" x="220.5" y="0.0" width="94.5" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Versturen"/>
+                                        <connections>
+                                            <action selector="sendMessageClickHandler:" destination="fgo-3w-Etb" eventType="touchUpInside" id="4fe-NY-1D4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
