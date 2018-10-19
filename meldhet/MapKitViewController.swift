@@ -104,7 +104,8 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        CoreDataHelper().writeList(issues: self.issues!)
+        if(self.issues != nil){
+            CoreDataHelper().writeList(issues: self.issues!)}
         super.viewWillDisappear(true)
     }
     
