@@ -9,7 +9,8 @@ target 'meldhet' do
     pod 'Firebase/Core'
     pod 'Firebase/Storage'
     pod 'Firebase/Auth'
-
+    pod 'Alamofire', '~> 4.7'
+    pod 'KDCircularProgress'
 
   target 'meldhetTests' do
     inherit! :search_paths

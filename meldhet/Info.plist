@@ -26,6 +26,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>This app will use the camera.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Your location is required.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is required.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Please allow access to save photo in your photo library</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -51,10 +55,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Your location is required.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Your location is required.</string>
 </dict>
 </plist>
