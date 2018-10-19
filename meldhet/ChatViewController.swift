@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
 
 extension UIColor {
     public convenience init(rgb: Int) {
@@ -31,6 +33,43 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         NotificationCenter.default.addObserver(self, selector: #selector (keyboarWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector (keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        self.scrollToBottom()
+    }
+    
+    @IBAction func sendMessageClickHandler(_ sender: UIButton) {
+        let message = Message()
+        
+        message.body = self.chatTextView.text!
+        message.issue = self.issue?.id
+        message.recipient = issue?.messages![0].sender
+        message.sender = AppDelegate.deviceID
+        
+        self.issue?.messages!.append(message)
+        let row = (self.issue?.messages!.count)! - 1
+        
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
+        
+        let parameters = [
+            "recipient": message.recipient!,
+            "sender": message.sender!,
+            "issue": message.issue!,
+            "body": message.body!
+        ] as [String : Any]
+        
+        Alamofire.request("https://api.meldhet.cheesycode.com/v1/messages/create",method:.post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                print("Validation complete: message pushed to server")
+                
+            case .failure(let error):
+                print("Unable to post message:")
+                print(error.localizedDescription)
+            }
+        }
+        
+        self.chatTextView.text? = ""
         self.scrollToBottom()
     }
     
@@ -79,17 +118,18 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.messageTextView.text = msg?.body
         
-        if msg?.recipient == AppDelegate.deviceID {
-            cell.messageTextView.backgroundColor = UIColor(red: 0xFF, green: 0xCE, blue: 0x54)
-            cell.marginRight.constant = 100
-            cell.marginLeft.constant = 16
-            cell.senderTextView.textAlignment = NSTextAlignment.left
-
-        } else {
+        if msg?.sender == AppDelegate.deviceID {
             cell.messageTextView.backgroundColor = UIColor(red: 0x4F, green: 0xC1, blue: 0xE9)
             cell.marginRight.constant = 16
             cell.marginLeft.constant = 100
             cell.senderTextView.textAlignment = NSTextAlignment.right
+            cell.senderTextView.text = "Me"
+        } else {
+            cell.messageTextView.backgroundColor = UIColor(red: 0xFF, green: 0xCE, blue: 0x54)
+            cell.marginRight.constant = 100
+            cell.marginLeft.constant = 16
+            cell.senderTextView.textAlignment = NSTextAlignment.left
+            cell.senderTextView.text = msg?.sender
         }
         
         cell.messageTextView.layer.cornerRadius = 8
