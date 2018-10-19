@@ -26,6 +26,8 @@
 		7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53821773B49003983E0 /* MapKitViewController.swift */; };
 		7D91D53D21777043003983E0 /* IssueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53C21777043003983E0 /* IssueAnnotation.swift */; };
 		7D91D5412177713B003983E0 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D5402177713B003983E0 /* Issue.swift */; };
+		8429F7FE2178E4DE002FC1E6 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429F7FD2178E4DE002FC1E6 /* WelcomePageViewController.swift */; };
+		8429F8002178F22A002FC1E6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429F7FF2178F22A002FC1E6 /* WelcomeViewController.swift */; };
 		843B66262177660C00EA9BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843B66252177660C00EA9BBF /* GoogleService-Info.plist */; };
 		8471664321777233007E3856 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471664221777233007E3856 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		7D91D53821773B49003983E0 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		7D91D53C21777043003983E0 /* IssueAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueAnnotation.swift; sourceTree = "<group>"; };
 		7D91D5402177713B003983E0 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		8429F7FD2178E4DE002FC1E6 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		8429F7FF2178F22A002FC1E6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		843B66252177660C00EA9BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8471664221777233007E3856 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		8814EE8E5B643B16256A440B /* Pods-meldhetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meldhetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meldhetUITests/Pods-meldhetUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,12 +156,14 @@
 		7D31C262216B96D60070530F /* meldhet */ = {
 			isa = PBXGroup;
 			children = (
+				8429F7FF2178F22A002FC1E6 /* WelcomeViewController.swift */,
 				7D91D5402177713B003983E0 /* Issue.swift */,
 				843B66252177660C00EA9BBF /* GoogleService-Info.plist */,
 				7D55A898216F370C0042B5E1 /* meldhet.entitlements */,
 				7D31C263216B96D60070530F /* AppDelegate.swift */,
 				7D31C265216B96D60070530F /* ViewController.swift */,
 				7D31C267216B96D60070530F /* Main.storyboard */,
+				8429F7FD2178E4DE002FC1E6 /* WelcomePageViewController.swift */,
 				7D31C26D216B96D70070530F /* Assets.xcassets */,
 				7D31C26F216B96D70070530F /* LaunchScreen.storyboard */,
 				7D31C272216B96D70070530F /* Info.plist */,
@@ -398,16 +404,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-meldhet/Pods-meldhet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KDCircularProgress/KDCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDCircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,11 +455,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D3751E42178B13800A5EDF7 /* MessageViewTableViewCell.swift in Sources */,
+				8429F8002178F22A002FC1E6 /* WelcomeViewController.swift in Sources */,
 				7D31C266216B96D60070530F /* ViewController.swift in Sources */,
 				8471664321777233007E3856 /* UploadViewController.swift in Sources */,
 				7D3751DE21788E5C00A5EDF7 /* ChatViewController.swift in Sources */,
 				7D31C264216B96D60070530F /* AppDelegate.swift in Sources */,
 				7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */,
+				8429F7FE2178E4DE002FC1E6 /* WelcomePageViewController.swift in Sources */,
 				7D91D53D21777043003983E0 /* IssueAnnotation.swift in Sources */,
 				7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */,
 				7D3751E62178C01A00A5EDF7 /* UIColorExtension.swift in Sources */,
@@ -629,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8W4QGMSQQ;
+				DEVELOPMENT_TEAM = 842Q3U739U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
@@ -645,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
+				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -660,13 +672,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8W4QGMSQQ;
+				DEVELOPMENT_TEAM = 842Q3U739U;
 				INFOPLIST_FILE = meldhet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet;
+				PRODUCT_BUNDLE_IDENTIFIER = cheesycode.meldhet2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
