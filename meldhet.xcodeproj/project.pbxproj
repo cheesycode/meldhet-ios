@@ -18,6 +18,9 @@
 		7D31C271216B96D70070530F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D31C26F216B96D70070530F /* LaunchScreen.storyboard */; };
 		7D31C27C216B96D70070530F /* meldhetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C27B216B96D70070530F /* meldhetTests.swift */; };
 		7D31C287216B96D70070530F /* meldhetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C286216B96D70070530F /* meldhetUITests.swift */; };
+		7D3751DE21788E5C00A5EDF7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3751DD21788E5B00A5EDF7 /* ChatViewController.swift */; };
+		7D3751E42178B13800A5EDF7 /* MessageViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3751E32178B13800A5EDF7 /* MessageViewTableViewCell.swift */; };
+		7D3751E62178C01A00A5EDF7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3751E52178C01A00A5EDF7 /* UIColorExtension.swift */; };
 		7D55A89A216F51820042B5E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A899216F51820042B5E1 /* AVFoundation.framework */; };
 		7D55A89C216F82F50042B5E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D55A89B216F82F50042B5E1 /* MapKit.framework */; };
 		7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91D53821773B49003983E0 /* MapKitViewController.swift */; };
@@ -62,6 +65,9 @@
 		7D31C282216B96D70070530F /* meldhetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meldhetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D31C286216B96D70070530F /* meldhetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meldhetUITests.swift; sourceTree = "<group>"; };
 		7D31C288216B96D70070530F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D3751DD21788E5B00A5EDF7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		7D3751E32178B13800A5EDF7 /* MessageViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewTableViewCell.swift; sourceTree = "<group>"; };
+		7D3751E52178C01A00A5EDF7 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7D55A898216F370C0042B5E1 /* meldhet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = meldhet.entitlements; sourceTree = "<group>"; };
 		7D55A899216F51820042B5E1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7D55A89B216F82F50042B5E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -159,6 +165,9 @@
 				7D91D53821773B49003983E0 /* MapKitViewController.swift */,
 				7D91D53C21777043003983E0 /* IssueAnnotation.swift */,
 				8471664221777233007E3856 /* UploadViewController.swift */,
+				7D3751DD21788E5B00A5EDF7 /* ChatViewController.swift */,
+				7D3751E32178B13800A5EDF7 /* MessageViewTableViewCell.swift */,
+				7D3751E52178C01A00A5EDF7 /* UIColorExtension.swift */,
 			);
 			path = meldhet;
 			sourceTree = "<group>";
@@ -435,12 +444,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3751E42178B13800A5EDF7 /* MessageViewTableViewCell.swift in Sources */,
 				7D31C266216B96D60070530F /* ViewController.swift in Sources */,
 				8471664321777233007E3856 /* UploadViewController.swift in Sources */,
+				7D3751DE21788E5C00A5EDF7 /* ChatViewController.swift in Sources */,
 				7D31C264216B96D60070530F /* AppDelegate.swift in Sources */,
 				7D91D53921773B49003983E0 /* MapKitViewController.swift in Sources */,
 				7D91D53D21777043003983E0 /* IssueAnnotation.swift in Sources */,
 				7D31C26C216B96D60070530F /* meldhet.xcdatamodeld in Sources */,
+				7D3751E62178C01A00A5EDF7 /* UIColorExtension.swift in Sources */,
 				7D91D5412177713B003983E0 /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

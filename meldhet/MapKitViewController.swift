@@ -88,6 +88,7 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         let annotation = view.annotation as! IssueAnnotation
         
         print("You clicked on issue: " + annotation.issue.id)
+        self.performSegue(withIdentifier: "chatSegue", sender: annotation.issue)
     }
     
     /*func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -98,14 +99,14 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         return pinAnnotationView
     }*/
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let issue = sender as! Issue
+        
+        if let dest = segue.destination as? ChatViewController {
+            dest.issue = issue
+        }
     }
-    */
-
 }
