@@ -70,16 +70,17 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                     if let stringData = String(data: data, encoding: String.Encoding.utf8) {
                         print(stringData)
                     }
-
-                    guard let json = try? JSONDecoder().decode([Issue].self, from: data) else {
-                        print("Error unable to deserialize issue's")
-                        return;
-                    }
-
+                    do{
+                    let json = try JSONDecoder().decode([Issue].self, from: data)
                     self.issues = json
-                    
-                    self.drawAnnotation(issues: self.issues!)
-                    
+                    }
+                    catch let error{
+                        print(error)
+                    }
+                    if(self.issues != nil){
+                        
+                        self.drawAnnotation(issues: self.issues!)
+                    }
                 }
             })
          

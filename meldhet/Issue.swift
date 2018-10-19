@@ -19,6 +19,17 @@ class Issue : Decodable {
         self.id = id
         self.status = status
     }
+    init(acc : Float, creator : String, image :String, lat: Float, lon: Float, tag: String, id: String, status: String?, messages: [Message]?) {
+        self.acc = acc
+        self.creator = creator
+        self.image = image
+        self.lat = lat
+        self.lon = lon
+        self.tag = tag
+        self.id = id
+        self.status = status
+        self.messages = messages
+    }
     var acc: Float
     var creator: String
     var image: String
