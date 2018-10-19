@@ -94,6 +94,7 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDataS
         
         return orderedViewControllers[previousIndex]
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {

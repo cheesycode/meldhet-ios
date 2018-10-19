@@ -12,16 +12,15 @@ class MessageViewTableViewCell: UITableViewCell {
     @IBOutlet weak var senderTextView: UILabel!
     @IBOutlet weak var messageTextView: UITextView!
     
+    @IBOutlet weak var marginLeft: NSLayoutConstraint!
+    @IBOutlet weak var marginRight: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpContentWrap()
     }
     
     public func setUpContentWrap() {
-        let width = self.messageTextView.frame.size.height
-        let new = self.messageTextView.sizeThatFits(CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
-        
         self.messageTextView.isScrollEnabled = false
-        self.messageTextView.frame.size = CGSize(width: max(new.width, width), height: new.height)
         self.messageTextView.sizeToFit()
     }
 
