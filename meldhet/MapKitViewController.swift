@@ -11,6 +11,7 @@ import UIKit
 import MapKit
 import Alamofire
 import SwiftyJSON
+import Firebase
 
 class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
@@ -58,11 +59,11 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
     
     private func loadIssues() {
-
-        let urlString = URL(string: "https://api.meldhet.cheesycode.com/v1/issues/get?id=" + AppDelegate.deviceID!)
+        if(AppDelegate.deviceID != nil){
+        let urlString = URL(string: "https://api.meldhet.cheesycode.com/v1/issues/get?id=" + AppDelegate.deviceID! )
         var coredata = CoreDataHelper()
         
-        drawAnnotation(issues: coredata.getList())
+        self.drawAnnotation(issues: coredata.getList())
         let session = URLSession.shared
         if let usableUrl = urlString {
             let task = session.dataTask(with: usableUrl, completionHandler: { (data, response, error) in
@@ -86,6 +87,19 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
          
             task.resume()
         }
+    }
+        else{
+            InstanceID.instanceID().instanceID { (result, error) in
+                if let error = error {
+                    print("Unable to load Firebase device token!")
+                    print(error.localizedDescription)
+                } else if let result = result {
+                    print("Remote instance ID token: \(result.token)")
+                    AppDelegate.deviceID = result.token
+                    self.loadIssues()
+                }
+        }
+    }
     }
     
     func drawAnnotation(issues : [Issue]){
