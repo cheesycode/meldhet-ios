@@ -512,6 +512,9 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSm-MQ-S2w">
                                                             <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                            </accessibility>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -519,6 +522,9 @@
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-Up-IQQ">
                                                             <rect key="frame" x="0.0" y="28.5" width="288" height="34"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                            </accessibility>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -533,6 +539,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="1S3-1r-a94" secondAttribute="trailing" constant="16" id="n1H-qX-YmL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="marginLeft" destination="apj-9R-tjh" id="yW3-OZ-WQE"/>
                                             <outlet property="marginRight" destination="n1H-qX-YmL" id="3qu-mR-QQr"/>
@@ -637,7 +646,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="Bfi-2D-ZGu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="Bfi-2D-ZGu">
                                 <rect key="frame" x="50" y="152" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bfi-2D-ZGu" secondAttribute="height" multiplier="1:1" id="Lou-fv-Xe6"/>
@@ -706,7 +715,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" translatesAutoresizingMaskIntoConstraints="NO" id="EeJ-jy-zwj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" translatesAutoresizingMaskIntoConstraints="NO" id="EeJ-jy-zwj">
                                 <rect key="frame" x="50" y="151.5" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EeJ-jy-zwj" secondAttribute="height" multiplier="1:1" id="sMT-2S-JTN"/>
@@ -779,7 +788,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="City_hall_1" translatesAutoresizingMaskIntoConstraints="NO" id="823-5L-dcA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="City_hall_1" translatesAutoresizingMaskIntoConstraints="NO" id="823-5L-dcA">
                                 <rect key="frame" x="50" y="155.5" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="823-5L-dcA" secondAttribute="height" multiplier="1:1" id="vFH-qs-aJk"/>
@@ -845,7 +854,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="P0H-5H-Azt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="P0H-5H-Azt">
                                 <rect key="frame" x="50" y="151.5" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="P0H-5H-Azt" secondAttribute="height" multiplier="1:1" id="Q43-f4-3ZX"/>
